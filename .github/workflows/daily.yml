@@ -1,0 +1,26 @@
+name: Daily AutoHero collection
+
+on:
+  schedule:
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests gspread google-auth
+
+      - name: Write service account key
+        run: echo '${{ secrets.GSHEETS_KEY }}' > service_account.json
+
+      - name: Run collector
+        run: python run.py
