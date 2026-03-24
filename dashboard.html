@@ -29,6 +29,9 @@
   .filter-btn { background: #f5f5f0; border: 1px solid #e5e5e5; border-radius: 6px; padding: 4px 12px; font-size: 12px; cursor: pointer; }
   .filter-btn.on { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .price-toggle { display: flex; gap: 8px; margin-bottom: 1rem; }
+  .price-toggle button { background: #f5f5f0; border: 1px solid #e5e5e5; border-radius: 6px; padding: 4px 12px; font-size: 12px; cursor: pointer; }
+  .price-toggle button.on { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
 </style>
 </head>
 <body>
@@ -79,9 +82,15 @@
 
 <div id="panel-prices" class="panel">
   <div class="card">
-    <div class="card-title">Average price by make — latest snapshot</div>
-    <div class="filter-row" id="price-market-filters"></div>
-    <div class="chart-wrap" style="height:500px"><canvas id="chart-prices"></canvas></div>
+    <div class="card-title">By make — latest snapshot</div>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:1rem">
+      <div class="filter-row" id="price-market-filters" style="margin-bottom:0"></div>
+      <div class="price-toggle">
+        <button class="on" id="toggle-price" onclick="setPriceMode('price')">Avg price</button>
+        <button id="toggle-count" onclick="setPriceMode('count')">Listing count</button>
+      </div>
+    </div>
+    <div class="chart-wrap" style="height:520px"><canvas id="chart-prices"></canvas></div>
   </div>
 </div>
 
@@ -136,7 +145,7 @@ const baseOpts = (yFmt) => ({
   }
 });
 
-const priceOpts = () => ({
+const priceOpts = (xFmt) => ({
   responsive: true, maintainAspectRatio: false,
   indexAxis: "y",
   plugins: { legend: { display: false } },
@@ -144,7 +153,7 @@ const priceOpts = () => ({
     x: {
       grid: { color: "rgba(0,0,0,0.05)" },
       border: { display: false },
-      ticks: { color: "#aaa", font: { size: 11 }, callback: v => "€" + Math.round(v / 1000) + "k" }
+      ticks: { color: "#aaa", font: { size: 11 }, callback: xFmt }
     },
     y: {
       grid: { display: false },
@@ -154,10 +163,17 @@ const priceOpts = () => ({
   }
 });
 
-let allSnapshots = [], allPrices = [], activeMarkets = new Set(MARKETS), activePriceMarket = "DE";
+let allSnapshots = [], allPrices = [], activeMarkets = new Set(MARKETS), activePriceMarket = "DE", priceMode = "price";
 
 function uniqueDates(data) {
   return [...new Set(data.map(r => r[0]))].sort();
+}
+
+function setPriceMode(mode) {
+  priceMode = mode;
+  document.getElementById("toggle-price").classList.toggle("on", mode === "price");
+  document.getElementById("toggle-count").classList.toggle("on", mode === "count");
+  buildPrices();
 }
 
 function buildOverview() {
@@ -249,29 +265,36 @@ function buildPrices() {
   const dates = uniqueDates(allPrices.filter(r => r[1] === activePriceMarket));
   const latest = dates[dates.length - 1];
 
-  // Deduplicate by make — keep only latest row per make
   const byMake = {};
   allPrices
     .filter(r => r[0] === latest && r[1] === activePriceMarket)
     .forEach(r => { byMake[r[2]] = r; });
 
   const deduped = Object.values(byMake);
-  deduped.sort((a, b) => (parseFloat(b[3]) || 0) - (parseFloat(a[3]) || 0));
-  const top20 = deduped.slice(0, 20);
 
-  mkChart("chart-prices", {
-    type: "bar",
-    data: {
-      labels: top20.map(r => r[2]),
-      datasets: [{
-        data: top20.map(r => parseFloat(r[3]) || 0),
-        backgroundColor: "#2563eb",
-        borderRadius: 4,
-        barThickness: 18
-      }]
-    },
-    options: priceOpts()
-  });
+  if (priceMode === "price") {
+    deduped.sort((a, b) => (parseFloat(b[3]) || 0) - (parseFloat(a[3]) || 0));
+    const top20 = deduped.slice(0, 20);
+    mkChart("chart-prices", {
+      type: "bar",
+      data: {
+        labels: top20.map(r => r[2]),
+        datasets: [{ data: top20.map(r => parseFloat(r[3]) || 0), backgroundColor: "#2563eb", borderRadius: 4, barThickness: 18 }]
+      },
+      options: priceOpts(v => "€" + Math.round(v / 1000) + "k")
+    });
+  } else {
+    deduped.sort((a, b) => (parseInt(b[4]) || 0) - (parseInt(a[4]) || 0));
+    const top20 = deduped.slice(0, 20);
+    mkChart("chart-prices", {
+      type: "bar",
+      data: {
+        labels: top20.map(r => r[2]),
+        datasets: [{ data: top20.map(r => parseInt(r[4]) || 0), backgroundColor: "#16a34a", borderRadius: 4, barThickness: 18 }]
+      },
+      options: priceOpts(v => v.toLocaleString())
+    });
+  }
 }
 
 document.querySelectorAll(".tab").forEach(t => {
