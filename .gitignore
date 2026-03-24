@@ -1,0 +1,9 @@
+venv/
+service_account.json
+yesterday_ids.json
+collection_output.json
+test_response.json
+api_discovery.json
+__pycache__/
+*.pyc
+*.exe
