@@ -248,9 +248,16 @@ function buildPrices() {
 
   const dates = uniqueDates(allPrices.filter(r => r[1] === activePriceMarket));
   const latest = dates[dates.length - 1];
-  const rows = allPrices.filter(r => r[0] === latest && r[1] === activePriceMarket);
-  rows.sort((a, b) => (parseFloat(b[3]) || 0) - (parseFloat(a[3]) || 0));
-  const top20 = rows.slice(0, 20);
+
+  // Deduplicate by make — keep only latest row per make
+  const byMake = {};
+  allPrices
+    .filter(r => r[0] === latest && r[1] === activePriceMarket)
+    .forEach(r => { byMake[r[2]] = r; });
+
+  const deduped = Object.values(byMake);
+  deduped.sort((a, b) => (parseFloat(b[3]) || 0) - (parseFloat(a[3]) || 0));
+  const top20 = deduped.slice(0, 20);
 
   mkChart("chart-prices", {
     type: "bar",
