@@ -1,0 +1,810 @@
+{
+  "errors": [],
+  "data": {
+    "searchAdV9AdsV2": {
+      "total": 9347,
+      "data": [
+        {
+          "id": "e1261a76-f83f-4c2b-a7d3-0af5cff1d25d",
+          "stockNumber": "PV95366",
+          "offerPrice": {
+            "amountMinorUnits": 2699000,
+            "conversionMajor": 100,
+            "currency": "EUR"
+          },
+          "mileage": {
+            "distance": 35968,
+            "unit": "KM"
+          },
+          "usps": [],
+          "backofficeUsps": [],
+          "builtYear": 2019,
+          "countryCode": "DE",
+          "manufacturer": "Skoda",
+          "model": "Kodiaq",
+          "subType": "1.5 TSI ACT",
+          "subTypeExtra": "Style",
+          "firstRegistrationYear": 2019,
+          "fuelType": 1039,
+          "driveTrain": "front-wheel",
+          "gearType": 1139,
+          "kw": 110.0,
+          "firstPublishedAt": "20260323T095534.000Z",
+          "publishedAt": "20260323T095534.000Z",
+          "retailAdState": "imported-to-retail",
+          "registration": "20191204T000000.000Z",
+          "isComingSoon": false,
+          "mainImageUrl": "https://img-eu-c1.autohero.com/img/ad4e9afe7d5f7a90fd0134c635d2e7b8b83696f080af8c4c8f6362c497dd5122/exterior/1/{size}ab527028087a4509813f093b459cc3e4.jpg",
+          "ahMainImageUrl": "https://c2.autohero.com/e1261a76-f83f-4c2b-a7d3-0af5cff1d25d/{size}a0a6fab6-9e88-4d71-afd7-51c0bd030a19.jpg?t=1773642417",
+          "fuelConsumption": {
+            "city": 6.9,
+            "highway": 5.4,
+            "combined": 6.0
+          },
+          "esFuelConsumption": {
+            "city": 6.9,
+            "highway": 5.4,
+            "combined": 6.0
+          },
+          "co2Value": 177.0,
+          "firstImportedAt": "20260221T105209.000Z",
+          "vatType": 1053,
+          "retailAdId": "89199032-8954-4065-913c-27d96a62d335",
+          "carUrlTitle": "skoda-kodiaq",
+          "inShowroom": false,
+          "branchId": 393,
+          "emissionSticker": "green",
+          "discountedWarranty": false,
+          "esBranch": {
+            "branchId": 393,
+            "city": "Hemau",
+            "zipcode": "93155",
+            "name": "Workshop Hemau",
+            "street": "Nordhausstr. 1"
+          },
+          "emissionStandard": 3532,
+          "numberOfAccidents": 0,
+          "numberOfDamages": 19,
+          "hasFilledServiceBook": true,
+          "lastServiceOn": "20260316",
+          "acceleration": 9.8,
+          "ccm": 1498.0,
+          "isPluginSystem": false,
+          "monthlyPayment": {
+            "financingPeriod": 96,
+            "amountMinorUnits": 36500,
+            "currency": "EUR",
+            "cashAmountMinorUnits": 0,
+            "conversionMajor": 100
+          },
+          "impressionGroup": "A"
+        },
+        {
+          "id": "7910c553-033f-4106-8ba8-7731e7ed0db7",
+          "stockNumber": "FB30436",
+          "offerPrice": {
+            "amountMinorUnits": 1475000,
+            "conversionMajor": 100,
+            "currency": "EUR"
+          },
+          "promoDownPriceMargin": {
+            "amountMinorUnits": 64000,
+            "conversionMajor": 100,
+            "currency": "EUR"
+          },
+          "mileage": {
+            "distance": 106738,
+            "unit": "KM"
+          },
+          "usps": [],
+          "backofficeUsps": [],
+          "builtYear": 2018,
+          "countryCode": "DE",
+          "manufacturer": "MINI",
+          "model": "MINI",
+          "subType": "One",
+          "firstRegistrationYear": 2018,
+          "fuelType": 1039,
+          "driveTrain": "front-wheel",
+          "gearType": 1139,
+          "kw": 75.0,
+          "firstPublishedAt": "20250326T123342.000Z",
+          "publishedAt": "20260225T130935.000Z",
+          "retailAdState": "imported-to-retail",
+          "registration": "20180425T000000.000Z",
+          "isComingSoon": false,
+          "mainImageUrl": "https://img-eu-c1.autohero.com/img/d2168e4bdf8e672d70a8d949c63b211ad6470a1418020024c97351032dc29c62/exterior/1/{size}6747d5e15a244e268e8b43bdf1cffa38.jpg",
+          "ahMainImageUrl": "https://c2.autohero.com/7910c553-033f-4106-8ba8-7731e7ed0db7/{size}50d9c4f4-ac46-41b3-b44d-1dc244888be1.jpg?t=1745487880",
+          "fuelConsumption": {
+            "city": 6.0,
+            "highway": 4.2,
+            "combined": 4.9
+          },
+          "esFuelConsumption": {
+            "city": 6.0,
+            "highway": 4.2,
+            "combined": 4.9
+          },
+          "co2Value": 116.0,
+          "firstImportedAt": "20250319T134903.000Z",
+          "vatType": 1053,
+          "retailAdId": "f42f5a3d-08f8-4362-97b2-781848f1dc2b",
+          "carUrlTitle": "mini-mini",
+          "inShowroom": false,
+          "branchId": 393,
+          "emissionSticker": "green",
+          "discountedWarranty": false,
+          "esBranch": {
+            "branchId": 393,
+            "city": "Hemau",
+            "zipcode": "93155",
+            "name": "Workshop Hemau",
+            "street": "Nordhausstr. 1"
+          },
+          "emissionStandard": 3532,
+          "carPreownerCount": 1,
+          "numberOfAccidents": 0,
+          "numberOfDamages": 15,
+          "hasFilledServiceBook": false,
+          "lastServiceOn": "20250424",
+          "ccm": 1499.0,
+          "isPluginSystem": false,
+          "monthlyPayment": {
+            "financingPeriod": 96,
+            "amountMinorUnits": 19900,
+            "currency": "EUR",
+            "cashAmountMinorUnits": 0,
+            "conversionMajor": 100
+          },
+          "impressionGroup": "B"
+        },
+        {
+          "id": "628b1894-417a-4c37-8f7f-580cfdd0e841",
+          "stockNumber": "XJ24078",
+          "offerPrice": {
+            "amountMinorUnits": 2349000,
+            "conversionMajor": 100,
+            "currency": "EUR"
+          },
+          "mileage": {
+            "distance": 56671,
+            "unit": "KM"
+          },
+          "usps": [],
+          "backofficeUsps": [],
+          "builtYear": 2019,
+          "countryCode": "DE",
+          "manufacturer": "Audi",
+          "model": "A1 Sportback",
+          "subType": "40 TFSI",
+          "subTypeExtra": "Edition One",
+          "firstRegistrationYear": 2019,
+          "fuelType": 1039,
+          "driveTrain": "front-wheel",
+          "gearType": 1139,
+          "kw": 147.0,
+          "firstPublishedAt": "20260323T134735.000Z",
+          "publishedAt": "20260323T134735.000Z",
+          "retailAdState": "imported-to-retail",
+          "registration": "20190731T000000.000Z",
+          "isComingSoon": false,
+          "mainImageUrl": "https://img-eu-c1.autohero.com/img/75542c36059789a65225e7a5f1a2ce0111b78f4014f0bb6a6f23fcb7563bf65b/exterior/1/{size}0241b5ea57134fc5b105c0b3b60cc67e.jpg",
+          "ahMainImageUrl": "https://c2.autohero.com/628b1894-417a-4c37-8f7f-580cfdd0e841/{size}83dd0406-5db1-417d-944b-84daefe0f7d4.jpg?t=1774022554",
+          "fuelConsumption": {
+            "city": 8.2,
+            "highway": 4.8,
+            "combined": 6.0
+          },
+          "esFuelConsumption": {
+            "city": 8.2,
+            "highway": 4.8,
+            "combined": 6.0
+          },
+          "co2Value": 159.0,
+          "firstImportedAt": "20260128T162418.000Z",
+          "vatType": 1053,
+          "retailAdId": "2cf61ce8-0322-4715-b093-12e752886967",
+          "carUrlTitle": "audi-a-1-sportback",
+          "inShowroom": false,
+          "branchId": 393,
+          "emissionSticker": "green",
+          "discountedWarranty": false,
+          "esBranch": {
+            "branchId": 393,
+            "city": "Hemau",
+            "zipcode": "93155",
+            "name": "Workshop Hemau",
+            "street": "Nordhausstr. 1"
+          },
+          "emissionStandard": 3532,
+          "carPreownerCount": 2,
+          "numberOfAccidents": 4,
+          "numberOfDamages": 4,
+          "hasFilledServiceBook": false,
+          "lastServiceOn": "20260320",
+          "acceleration": 6.5,
+          "ccm": 1984.0,
+          "isPluginSystem": false,
+          "monthlyPayment": {
+            "financingPeriod": 96,
+            "amountMinorUnits": 31800,
+            "currency": "EUR",
+            "cashAmountMinorUnits": 0,
+            "conversionMajor": 100
+          },
+          "impressionGroup": "A"
+        },
+        {
+          "id": "8e197e27-c676-44b8-8208-e490f2c4b77c",
+          "stockNumber": "XY15922",
+          "offerPrice": {
+            "amountMinorUnits": 1538000,
+            "conversionMajor": 100,
+            "currency": "EUR"
+          },
+          "mileage": {
+            "distance": 62154,
+            "unit": "KM"
+          },
+          "usps": [],
+          "backofficeUsps": [],
+          "builtYear": 2020,
+          "countryCode": "DE",
+          "manufacturer": "Mercedes-Benz",
+          "model": "Citan",
+          "subType": "111 CDI",
+          "subTypeExtra": "Lang",
+          "firstRegistrationYear": 2020,
+          "fuelType": 1040,
+          "driveTrain": "front-wheel",
+          "gearType": 1138,
+          "kw": 85.0,
+          "firstPublishedAt": "20250627T123037.000Z",
+          "publishedAt": "20260320T125513.000Z",
+          "retailAdState": "imported-to-retail",
+          "registration": "20201007T000000.000Z",
+          "isComingSoon": false,
+          "mainImageUrl": "https://img-eu-c1.autohero.com/img/c15e75d01c655c6c5849e5378a57471db75f06a97361d7b5d9569764bfe6081e/exterior/1/{size}677513c39d11477ca9edcd99c5e231fd.jpg",
+          "ahMainImageUrl": "https://c2.autohero.com/8e197e27-c676-44b8-8208-e490f2c4b77c/{size}b08bcc28-9f53-456c-8fb3-846fa1c747bd.jpg?t=1751366934",
+          "fuelConsumption": {
+            "city": 5.0,
+            "highway": 4.4,
+            "combined": 4.6
+          },
+          "esFuelConsumption": {
+            "city": 5.0,
+            "highway": 4.4,
+            "combined": 4.6
+          },
+          "co2Value": 150.0,
+          "firstImportedAt": "20250614T131916.000Z",
+          "vatType": 1053,
+          "retailAdId": "99109fc0-37d7-4035-8191-05b191421116",
+          "carUrlTitle": "mercedes-benz-citan",
+          "inShowroom": false,
+          "branchId": 401,
+          "emissionSticker": "green",
+          "discountedWarranty": false,
+          "esBranch": {
+            "branchId": 401,
+            "city": "Ketzin",
+            "zipcode": "14669",
+            "name": "Workshop Ketzin",
+            "street": "Gewerbegebiet Ketzin (Einfahrt Autohero Gate)"
+          },
+          "emissionStandard": 3532,
+          "carPreownerCount": 1,
+          "numberOfAccidents": 0,
+          "numberOfDamages": 24,
+          "hasFilledServiceBook": true,
+          "lastServiceOn": "20241203",
+          "ccm": 1461.0,
+          "isPluginSystem": false,
+          "monthlyPayment": {
+            "financingPeriod": 96,
+            "amountMinorUnits": 20800,
+            "currency": "EUR",
+            "cashAmountMinorUnits": 0,
+            "conversionMajor": 100
+          },
+          "downPriceMargin": {
+            "amountMinorUnits": 312000,
+            "currency": "EUR",
+            "conversionMajor": 100
+          },
+          "previousPrice": {
+            "amountMinorUnits": 1584000,
+            "currency": "EUR",
+            "conversionMajor": 100
+          },
+          "firstPrice": {
+            "amountMinorUnits": 1850000,
+            "currency": "EUR",
+            "conversionMajor": 100
+          },
+          "impressionGroup": "B"
+        },
+        {
+          "id": "09299792-59fc-48e4-9abd-e0c86b2a256a",
+          "stockNumber": "VD47679",
+          "offerPrice": {
+            "amountMinorUnits": 2865000,
+            "conversionMajor": 100,
+            "currency": "EUR"
+          },
+          "mileage": {
+            "distance": 104557,
+            "unit": "KM"
+          },
+          "usps": [],
+          "backofficeUsps": [],
+          "builtYear": 2019,
+          "countryCode": "DE",
+          "manufacturer": "BMW",
+          "model": "3er",
+          "subType": "320i",
+          "subTypeExtra": "xDrive M Sport",
+          "firstRegistrationYear": 2019,
+          "fuelType": 1039,
+          "driveTrain": "all-wheel-drive",
+          "gearType": 1139,
+          "kw": 135.0,
+          "firstPublishedAt": "20260323T144011.000Z",
+          "publishedAt": "20260323T144011.000Z",
+          "retailAdState": "imported-to-retail",
+          "registration": "20191030T000000.000Z",
+          "isComingSoon": false,
+          "mainImageUrl": "https://img-eu-c1.autohero.com/img/62dc5ab874388a2c2ce45cc52eaa7c747b6137aad9cbec140e24d406a19eebf4/exterior/1/{size}a01ad975ff594fe4b9024c743a53d51f.jpg",
+          "ahMainImageUrl": "https://c2.autohero.com/09299792-59fc-48e4-9abd-e0c86b2a256a/{size}a09192f5-ed3d-42f6-b91d-17571a07afe3.jpg?t=1774274561",
+          "fuelConsumption": {
+            "city": 7.3,
+            "highway": 5.6,
+            "combined": 6.3
+          },
+          "esFuelConsumption": {
+            "city": 7.3,
+            "highway": 5.6,
+            "combined": 6.3
+          },
+          "co2Value": 153.0,
+          "firstImportedAt": "20260227T142411.000Z",
+          "vatType": 1053,
+          "retailAdId": "0e486639-24d6-45d6-8994-804f756e4203",
+          "carUrlTitle": "bmw-3-er",
+          "inShowroom": false,
+          "branchId": 393,
+          "discountedWarranty": false,
+          "esBranch": {
+            "branchId": 393,
+            "city": "Hemau",
+            "zipcode": "93155",
+            "name": "Workshop Hemau",
+            "street": "Nordhausstr. 1"
+          },
+          "emissionStandard": 3532,
+          "carPreownerCount": 2,
+          "numberOfAccidents": 0,
+          "numberOfDamages": 23,
+          "hasFilledServiceBook": true,
+          "lastServiceOn": "20250829",
+          "acceleration": 7.6,
+          "ccm": 1998.0,
+          "isPluginSystem": false,
+          "monthlyPayment": {
+            "financingPeriod": 96,
+            "amountMinorUnits": 38700,
+            "currency": "EUR",
+            "cashAmountMinorUnits": 0,
+            "conversionMajor": 100
+          },
+          "impressionGroup": "A"
+        },
+        {
+          "id": "db30244a-b291-4162-85cb-db3ebcd46e45",
+          "stockNumber": "YY70016",
+          "offerPrice": {
+            "amountMinorUnits": 5752000,
+            "conversionMajor": 100,
+            "currency": "EUR"
+          },
+          "dealerSalesPrice": {
+            "amountMinorUnits": 5985000,
+            "conversionMajor": 100,
+            "currency": "EUR"
+          },
+          "mileage": {
+            "distance": 94778,
+            "unit": "KM"
+          },
+          "usps": [
+            "fully-maintained"
+          ],
+          "backofficeUsps": [],
+          "builtYear": 2021,
+          "countryCode": "DE",
+          "manufacturer": "Mercedes-Benz",
+          "model": "GLE-Klasse",
+          "subType": "GLE 400 d",
+          "subTypeExtra": "4Matic AMG Line",
+          "firstRegistrationYear": 2021,
+          "fuelType": 1040,
+          "driveTrain": "all-wheel-drive",
+          "gearType": 1139,
+          "kw": 243.0,
+          "firstPublishedAt": "20250705T060037.000Z",
+          "publishedAt": "20260323T125438.000Z",
+          "retailAdState": "imported-to-retail",
+          "registration": "20210917T000000.000Z",
+          "isComingSoon": false,
+          "mainImageUrl": "https://img-eu-c1.autohero.com/img/f766817601bd74f8aac84b3653a4ffdea064b7fedc6a2272539d31aa9b92916e/exterior/1/{size}e75f80dd34314eb8a710c7262bd0e534.jpg",
+          "ahMainImageUrl": "https://c2.autohero.com/db30244a-b291-4162-85cb-db3ebcd46e45/{size}acefd2b9-1c23-4aec-b575-bc6aaa768845.jpg?t=1750848485",
+          "fuelConsumption": {
+            "city": 8.5,
+            "highway": 5.6,
+            "combined": 7.9
+          },
+          "esFuelConsumption": {
+            "city": 8.5,
+            "highway": 5.6,
+            "combined": 7.9
+          },
+          "co2Value": 181.0,
+          "firstImportedAt": "20250618T133033.000Z",
+          "vatType": 1053,
+          "retailAdId": "e7bdf934-b3e7-4675-9192-289c51dbc907",
+          "carUrlTitle": "mercedes-benz-gle-klasse",
+          "inShowroom": false,
+          "branchId": 393,
+          "emissionSticker": "green",
+          "discountedWarranty": false,
+          "esBranch": {
+            "branchId": 393,
+            "city": "Hemau",
+            "zipcode": "93155",
+            "name": "Workshop Hemau",
+            "street": "Nordhausstr. 1"
+          },
+          "emissionStandard": 3532,
+          "carPreownerCount": 1,
+          "numberOfAccidents": 3,
+          "numberOfDamages": 8,
+          "hasFilledServiceBook": true,
+          "lastServiceOn": "20250624",
+          "acceleration": 5.7,
+          "ccm": 2925.0,
+          "isPluginSystem": false,
+          "monthlyPayment": {
+            "financingPeriod": 96,
+            "amountMinorUnits": 77800,
+            "currency": "EUR",
+            "cashAmountMinorUnits": 0,
+            "conversionMajor": 100
+          },
+          "impressionGroup": "B"
+        },
+        {
+          "id": "de77b974-e093-4fd3-9d2e-b1fe170d717d",
+          "stockNumber": "BH69940",
+          "offerPrice": {
+            "amountMinorUnits": 1099000,
+            "conversionMajor": 100,
+            "currency": "EUR"
+          },
+          "mileage": {
+            "distance": 38199,
+            "unit": "KM"
+          },
+          "usps": [],
+          "backofficeUsps": [],
+          "builtYear": 2016,
+          "countryCode": "DE",
+          "manufacturer": "Renault",
+          "model": "Captur",
+          "subType": "0.9 Energy",
+          "subTypeExtra": "Intens",
+          "firstRegistrationYear": 2016,
+          "fuelType": 1039,
+          "driveTrain": "front-wheel",
+          "gearType": 1138,
+          "kw": 66.0,
+          "firstPublishedAt": "20260323T061534.000Z",
+          "publishedAt": "20260323T061534.000Z",
+          "retailAdState": "imported-to-retail",
+          "registration": "20160718T000000.000Z",
+          "isComingSoon": false,
+          "mainImageUrl": "https://img-eu-c1.autohero.com/img/3c13796d69adbe2dfd286ca23886e7feb67c1be11449a1d190882a70ffc3e4fc/exterior/1/{size}d4f9965651fc4a4382d30d3724ebc878.jpg",
+          "ahMainImageUrl": "https://c2.autohero.com/de77b974-e093-4fd3-9d2e-b1fe170d717d/{size}e6081e7d-0de4-4df7-b231-93cedeb702d0.jpg?t=1773914012",
+          "fuelConsumption": {
+            "city": 6.0,
+            "highway": 4.3,
+            "combined": 4.9
+          },
+          "esFuelConsumption": {
+            "city": 6.0,
+            "highway": 4.3,
+            "combined": 4.9
+          },
+          "co2Value": 113.0,
+          "firstImportedAt": "20260314T122153.000Z",
+          "vatType": 1053,
+          "retailAdId": "5a66b4b7-1948-4f2f-aba1-8875e2aa36f2",
+          "carUrlTitle": "renault-captur",
+          "inShowroom": false,
+          "branchId": 393,
+          "emissionSticker": "green",
+          "discountedWarranty": false,
+          "esBranch": {
+            "branchId": 393,
+            "city": "Hemau",
+            "zipcode": "93155",
+            "name": "Workshop Hemau",
+            "street": "Nordhausstr. 1"
+          },
+          "emissionStandard": 3532,
+          "numberOfAccidents": 0,
+          "numberOfDamages": 12,
+          "hasFilledServiceBook": false,
+          "lastServiceOn": "20260318",
+          "acceleration": 12.9,
+          "ccm": 898.0,
+          "isPluginSystem": false,
+          "monthlyPayment": {
+            "financingPeriod": 72,
+            "amountMinorUnits": 18100,
+            "currency": "EUR",
+            "cashAmountMinorUnits": 0,
+            "conversionMajor": 100
+          },
+          "impressionGroup": "A"
+        },
+        {
+          "id": "21e32607-d8d3-4861-b0dc-7b80fe320aaa",
+          "stockNumber": "AE44362",
+          "offerPrice": {
+            "amountMinorUnits": 1269000,
+            "conversionMajor": 100,
+            "currency": "EUR"
+          },
+          "promoDownPriceMargin": {
+            "amountMinorUnits": 26000,
+            "conversionMajor": 100,
+            "currency": "EUR"
+          },
+          "mileage": {
+            "distance": 41901,
+            "unit": "KM"
+          },
+          "usps": [
+            "single-owner"
+          ],
+          "backofficeUsps": [],
+          "builtYear": 2019,
+          "countryCode": "DE",
+          "manufacturer": "Opel",
+          "model": "Corsa",
+          "subType": "1.4 Turbo",
+          "subTypeExtra": "Color Edition ecoFlex",
+          "firstRegistrationYear": 2019,
+          "fuelType": 1039,
+          "driveTrain": "front-wheel",
+          "gearType": 1138,
+          "kw": 110.0,
+          "firstPublishedAt": "20250708T134332.000Z",
+          "publishedAt": "20260129T074955.000Z",
+          "retailAdState": "imported-to-retail",
+          "registration": "20190806T000000.000Z",
+          "isComingSoon": false,
+          "mainImageUrl": "https://img-eu-c1.autohero.com/img/73e8132944ec04607d376c05b4ae3cac9d361158172cc9504cf235b6af5d6aa5/exterior/1/{size}f0be9b21564b41669dca621652426394.jpg",
+          "ahMainImageUrl": "https://c2.autohero.com/21e32607-d8d3-4861-b0dc-7b80fe320aaa/{size}5620b55d-b618-4a18-8128-079a3ecbb07b.jpg?t=1752157689",
+          "fuelConsumption": {
+            "city": 7.3,
+            "highway": 5.1,
+            "combined": 5.9
+          },
+          "esFuelConsumption": {
+            "city": 7.3,
+            "highway": 5.1,
+            "combined": 5.9
+          },
+          "co2Value": 149.0,
+          "firstImportedAt": "20250703T074947.000Z",
+          "vatType": 1053,
+          "retailAdId": "b5846c6f-e1e3-43ff-a7b9-ab80b7bdd566",
+          "carUrlTitle": "opel-corsa",
+          "inShowroom": false,
+          "branchId": 393,
+          "emissionSticker": "green",
+          "discountedWarranty": false,
+          "esBranch": {
+            "branchId": 393,
+            "city": "Hemau",
+            "zipcode": "93155",
+            "name": "Workshop Hemau",
+            "street": "Nordhausstr. 1"
+          },
+          "emissionStandard": 3532,
+          "carPreownerCount": 0,
+          "numberOfAccidents": 0,
+          "numberOfDamages": 9,
+          "hasFilledServiceBook": false,
+          "lastServiceOn": "20250710",
+          "acceleration": 8.9,
+          "ccm": 1364.0,
+          "isPluginSystem": false,
+          "monthlyPayment": {
+            "financingPeriod": 96,
+            "amountMinorUnits": 17200,
+            "currency": "EUR",
+            "cashAmountMinorUnits": 0,
+            "conversionMajor": 100
+          },
+          "impressionGroup": "B"
+        },
+        {
+          "id": "8a673a70-b630-471c-a152-eb540711a660",
+          "stockNumber": "UW28494",
+          "offerPrice": {
+            "amountMinorUnits": 3299000,
+            "conversionMajor": 100,
+            "currency": "EUR"
+          },
+          "mileage": {
+            "distance": 78471,
+            "unit": "KM"
+          },
+          "usps": [],
+          "backofficeUsps": [],
+          "builtYear": 2021,
+          "countryCode": "DE",
+          "manufacturer": "Audi",
+          "model": "Q5",
+          "subType": "40 TDI Mild-Hybrid",
+          "subTypeExtra": "quattro advanced",
+          "firstRegistrationYear": 2021,
+          "fuelType": 1040,
+          "driveTrain": "all-wheel-drive",
+          "gearType": 1139,
+          "kw": 150.0,
+          "firstPublishedAt": "20260323T082916.000Z",
+          "publishedAt": "20260323T082916.000Z",
+          "retailAdState": "imported-to-retail",
+          "registration": "20210428T000000.000Z",
+          "isComingSoon": false,
+          "mainImageUrl": "https://img-eu-c1.autohero.com/img/c77992950187d4d3899c0dcdc4cfdaa05d9717bf73e6f31bc898a090904f9ebc/exterior/1/{size}33aa7bc1d30541238378a5736ec105da.jpg",
+          "ahMainImageUrl": "https://c2.autohero.com/8a673a70-b630-471c-a152-eb540711a660/{size}2cb8123f-eeeb-433a-843b-4e4303e6dc00.jpg?t=1774247476",
+          "fuelConsumption": {},
+          "esFuelConsumption": {},
+          "co2Value": 167.0,
+          "firstImportedAt": "20260316T105418.000Z",
+          "vatType": 1053,
+          "retailAdId": "a1505660-6bc5-4bfe-b9b1-ca85685d7dba",
+          "carUrlTitle": "audi-q-5",
+          "inShowroom": false,
+          "branchId": 401,
+          "emissionSticker": "green",
+          "discountedWarranty": false,
+          "esBranch": {
+            "branchId": 401,
+            "city": "Ketzin",
+            "zipcode": "14669",
+            "name": "Workshop Ketzin",
+            "street": "Gewerbegebiet Ketzin (Einfahrt Autohero Gate)"
+          },
+          "emissionStandard": 3532,
+          "numberOfAccidents": 0,
+          "numberOfDamages": 23,
+          "hasFilledServiceBook": false,
+          "lastServiceOn": "20260323",
+          "acceleration": 7.6,
+          "ccm": 1968.0,
+          "isPluginSystem": false,
+          "monthlyPayment": {
+            "financingPeriod": 96,
+            "amountMinorUnits": 44600,
+            "currency": "EUR",
+            "cashAmountMinorUnits": 0,
+            "conversionMajor": 100
+          },
+          "impressionGroup": "A"
+        },
+        {
+          "id": "eb3c5442-0c2d-42e3-b792-633fe85d7b85",
+          "stockNumber": "TA11180",
+          "previousPrice": {
+            "amountMinorUnits": 2461000,
+            "conversionMajor": 100,
+            "currency": "EUR"
+          },
+          "offerPrice": {
+            "amountMinorUnits": 2454000,
+            "conversionMajor": 100,
+            "currency": "EUR"
+          },
+          "promoDownPriceMargin": {
+            "amountMinorUnits": 449000,
+            "conversionMajor": 100,
+            "currency": "EUR"
+          },
+          "mileage": {
+            "distance": 50600,
+            "unit": "KM"
+          },
+          "usps": [],
+          "backofficeUsps": [],
+          "builtYear": 2020,
+          "countryCode": "DE",
+          "manufacturer": "Mercedes-Benz",
+          "model": "CLA-Klasse",
+          "subType": "CLA 200 Shooting Brake",
+          "subTypeExtra": "AMG Line",
+          "firstRegistrationYear": 2021,
+          "fuelType": 1039,
+          "driveTrain": "front-wheel",
+          "gearType": 1138,
+          "kw": 120.0,
+          "firstPublishedAt": "20250708T143230.000Z",
+          "publishedAt": "20260122T125501.000Z",
+          "retailAdState": "imported-to-retail",
+          "registration": "20211125T000000.000Z",
+          "isComingSoon": false,
+          "mainImageUrl": "https://img-eu-c1.autohero.com/img/2bdfdfe7a7a0a4c49b3f8361b066b7b8617af364696b4cd28c13e201b459ff9e/exterior/1/{size}d9034d1dadb3459db1e91f6860ca6615.jpg",
+          "ahMainImageUrl": "https://c2.autohero.com/eb3c5442-0c2d-42e3-b792-633fe85d7b85/{size}a9ed99bd-3fba-447a-9485-da1566386257.jpg?t=1769437409",
+          "fuelConsumption": {
+            "city": 6.5,
+            "highway": 4.8,
+            "combined": 5.4
+          },
+          "esFuelConsumption": {
+            "city": 6.5,
+            "highway": 4.8,
+            "combined": 5.4
+          },
+          "co2Value": 148.0,
+          "firstImportedAt": "20250630T105023.000Z",
+          "vatType": 1053,
+          "retailAdId": "f229fdb5-b7c5-43e4-be98-d7e5a73c9b84",
+          "carUrlTitle": "mercedes-benz-cla-klasse",
+          "inShowroom": false,
+          "branchId": 120,
+          "emissionSticker": "green",
+          "discountedWarranty": false,
+          "esBranch": {
+            "branchId": 120,
+            "city": "Hemau",
+            "zipcode": "93155",
+            "name": "Logistikzentrum Hemau",
+            "street": "Greinerstr. 2"
+          },
+          "emissionStandard": 3532,
+          "carPreownerCount": 2,
+          "numberOfAccidents": 0,
+          "numberOfDamages": 7,
+          "hasFilledServiceBook": false,
+          "lastServiceOn": "20250711",
+          "acceleration": 8.4,
+          "ccm": 1332.0,
+          "isPluginSystem": false,
+          "monthlyPayment": {
+            "financingPeriod": 96,
+            "amountMinorUnits": 33200,
+            "currency": "EUR",
+            "cashAmountMinorUnits": 0,
+            "conversionMajor": 100
+          },
+          "downPriceMargin": {
+            "amountMinorUnits": 545000,
+            "currency": "EUR",
+            "conversionMajor": 100
+          },
+          "firstPrice": {
+            "amountMinorUnits": 2999000,
+            "currency": "EUR",
+            "conversionMajor": 100
+          },
+          "impressionGroup": "B"
+        }
+      ]
+    }
+  },
+  "dataPresent": true
+}
