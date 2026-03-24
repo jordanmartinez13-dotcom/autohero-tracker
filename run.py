@@ -21,9 +21,3 @@ def save_id_cache(client, today_ids):
     ws.update(rows, "A1")
     print(f"Saved {len(rows)} IDs to cache")
 ```
-
-This stores one row per listing ID like:
-```
-DE    e1261a76-f83f-4c2b-a7d3-0af5cff1d25d
-DE    7910c553-033f-4106-8ba8-7731e7ed0db7
-FR    ...
