@@ -2,7 +2,7 @@ import requests
 import gspread
 from google.oauth2.service_account import Credentials
 import json
-from datetime import date
+from datetime import date, datetime, timezone, timedelta
 from time import sleep
 
 SHEET_ID = "1YAZWwCZ5Vf-GhMkRJaBoMlysJtkxyQothxnte6xU_cg"
@@ -29,11 +29,16 @@ def load_id_cache(client):
     rows = ws.get_all_values()
     cache = {}
     for row in rows:
-        if len(row) >= 2:
+        if len(row) >= 3:
+            country, listing_id, published_at = row[0], row[1], row[2]
+            if country not in cache:
+                cache[country] = {}
+            cache[country][listing_id] = published_at
+        elif len(row) >= 2:
             country, listing_id = row[0], row[1]
             if country not in cache:
-                cache[country] = set()
-            cache[country].add(listing_id)
+                cache[country] = {}
+            cache[country][listing_id] = ""
     print(f"Loaded ID cache for {list(cache.keys())}")
     return cache
 
@@ -41,9 +46,9 @@ def save_id_cache(client, today_ids):
     ws = get_sheet(client, "id_cache")
     ws.clear()
     rows = []
-    for country, ids in today_ids.items():
-        for listing_id in ids:
-            rows.append([country, listing_id])
+    for country, id_map in today_ids.items():
+        for listing_id, published_at in id_map.items():
+            rows.append([country, listing_id, published_at])
     ws.update(rows, "A1")
     print(f"Saved {len(rows)} IDs to cache")
 
@@ -84,20 +89,37 @@ def get_all_listings(country):
         sleep(0.5)
     return all_listings
 
+def parse_published_at(ts):
+    if not ts:
+        return None
+    try:
+        clean = ts.replace("Z", "+00:00").replace(".000+00:00", "+00:00")
+        # Format: 20260324T064814.000Z
+        dt = datetime.strptime(ts[:15], "%Y%m%dT%H%M%S")
+        return dt.replace(tzinfo=timezone.utc)
+    except:
+        return None
+
 def collect():
     results = []
     for country in MARKETS:
         print(f"\nCollecting {country}...")
         listings = get_all_listings(country)
         prices_by_make = {}
+        id_map = {}
         for l in listings:
+            lid = l["id"]
+            published_at = l.get("firstPublishedAt", "")
+            id_map[lid] = published_at
+
             make = l.get("manufacturer", "Unknown")
             price = l.get("offerPrice", {}).get("amountMinorUnits", 0) / 100
             prices_by_make.setdefault(make, []).append(price)
+
         results.append({
             "country": country,
             "total": len(listings),
-            "ids": [l["id"] for l in listings],
+            "id_map": id_map,
             "prices_by_make": {
                 make: {
                     "avg": round(sum(p) / len(p), 2),
@@ -109,6 +131,30 @@ def collect():
         print(f"  Done. {len(listings)} listings collected.")
     return results
 
+def compute_velocity(country, today_id_map, yesterday_cache):
+    today_ids = set(today_id_map.keys())
+    yesterday_ids = set(yesterday_cache.get(country, {}).keys())
+
+    if not yesterday_ids:
+        return 0, 0
+
+    # Removed = in yesterday but not today (genuine delistings/sales)
+    removed = len(yesterday_ids - today_ids)
+
+    # New = in today but not yesterday AND firstPublishedAt within last 48hrs
+    # This filters out sort-shuffle artefacts
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=48)
+    genuinely_new = 0
+    for lid in (today_ids - yesterday_ids):
+        published_at = today_id_map.get(lid, "")
+        dt = parse_published_at(published_at)
+        if dt and dt >= cutoff:
+            genuinely_new += 1
+        elif not dt:
+            genuinely_new += 1
+
+    return genuinely_new, removed
+
 def write_all(client, data, yesterday_cache):
     today = str(date.today())
     today_ids = {}
@@ -119,12 +165,9 @@ def write_all(client, data, yesterday_cache):
     for market in data:
         country = market["country"]
         total = market["total"]
-        current_ids = set(market["ids"])
-        today_ids[country] = current_ids
+        today_ids[country] = market["id_map"]
 
-        prev_ids = yesterday_cache.get(country, set())
-        new = len(current_ids - prev_ids) if prev_ids else 0
-        removed = len(prev_ids - current_ids) if prev_ids else 0
+        new, removed = compute_velocity(country, market["id_map"], yesterday_cache)
 
         snapshot_rows.append([today, country, total, new, removed])
         breakdown_rows.append([today, country, total])
@@ -157,10 +200,7 @@ def run():
     print("-" * 36)
     for m in data:
         c = m["country"]
-        curr = set(m["ids"])
-        prev = yesterday_cache.get(c, set())
-        new = len(curr - prev) if prev else 0
-        removed = len(prev - curr) if prev else 0
+        new, removed = compute_velocity(c, m["id_map"], yesterday_cache)
         print(f"{c:<10} {m['total']:>8,} {new:>8,} {removed:>8,}")
 
     print("\nDone!")
