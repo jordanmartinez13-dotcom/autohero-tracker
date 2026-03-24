@@ -49,4 +49,206 @@
 <div id="panel-overview" class="panel">
   <div class="metrics">
     <div class="metric"><div class="metric-label">Total listings</div><div class="metric-value" id="m-total">—</div><div class="metric-sub">all markets</div></div>
-    <div class="metric"><div class="metric-label">Largest market</div
+    <div class="metric"><div class="metric-label">Largest market</div><div class="metric-value" id="m-top">—</div><div class="metric-sub" id="m-top-sub">—</div></div>
+    <div class="metric"><div class="metric-label">Avg removed/day</div><div class="metric-value" id="m-removed">—</div><div class="metric-sub">proxy for sales</div></div>
+    <div class="metric"><div class="metric-label">Markets tracked</div><div class="metric-value">8</div><div class="metric-sub">DE FR ES IT NL BE PL AT</div></div>
+  </div>
+  <div class="card">
+    <div class="card-title">Total listings by market — over time</div>
+    <div class="filter-row" id="market-filters"></div>
+    <div class="chart-wrap" style="height:300px"><canvas id="chart-listings"></canvas></div>
+  </div>
+</div>
+
+<div id="panel-velocity" class="panel">
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">New listings per day</div>
+      <div class="chart-wrap" style="height:260px"><canvas id="chart-new"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Removed listings per day</div>
+      <div class="chart-wrap" style="height:260px"><canvas id="chart-removed"></canvas></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Net change per day (new minus removed)</div>
+    <div class="chart-wrap" style="height:260px"><canvas id="chart-net"></canvas></div>
+  </div>
+</div>
+
+<div id="panel-prices" class="panel">
+  <div class="card">
+    <div class="card-title">Average price by make — latest snapshot</div>
+    <div class="filter-row" id="price-market-filters"></div>
+    <div class="chart-wrap" style="height:500px"><canvas id="chart-prices"></canvas></div>
+  </div>
+</div>
+
+<script>
+const SHEET_ID = "1YAZWwCZ5Vf-GhMkRJaBoMlysJtkxyQothxnte6xU_cg";
+const MARKETS = ["DE","FR","ES","IT","NL","BE","PL","AT"];
+const COLORS = {
+  DE:"#2563eb",FR:"#16a34a",ES:"#dc2626",IT:"#9333ea",
+  NL:"#ea580c",BE:"#0891b2",PL:"#ca8a04",AT:"#be185d"
+};
+
+async function fetchSheet(tabName) {
+  const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(tabName)}`;
+  const r = await fetch(url, { mode: 'cors', credentials: 'omit' });
+  const text = await r.text();
+  return text.trim().split("\n").slice(1).map(row => {
+    const cols = [];
+    let cur = "", inQ = false;
+    for (const c of row) {
+      if (c === '"') { inQ = !inQ; }
+      else if (c === ',' && !inQ) { cols.push(cur.trim()); cur = ""; }
+      else cur += c;
+    }
+    cols.push(cur.trim());
+    return cols;
+  });
+}
+
+const charts = {};
+function mkChart(id, cfg) {
+  if (charts[id]) charts[id].destroy();
+  charts[id] = new Chart(document.getElementById(id), cfg);
+}
+
+const baseOpts = (yFmt) => ({
+  responsive: true, maintainAspectRatio: false,
+  plugins: { legend: { display: false } },
+  scales: {
+    x: { grid: { display: false }, border: { display: false }, ticks: { color: "#aaa", font: { size: 11 }, maxTicksLimit: 10 } },
+    y: { grid: { color: "rgba(0,0,0,0.05)" }, border: { display: false }, ticks: { color: "#aaa", font: { size: 11 }, callback: yFmt } }
+  }
+});
+
+let allSnapshots = [], allPrices = [], activeMarkets = new Set(MARKETS), activePriceMarket = "DE";
+
+function uniqueDates(data) {
+  return [...new Set(data.map(r => r[0]))].sort();
+}
+
+function buildOverview() {
+  const dates = uniqueDates(allSnapshots);
+  const latest = dates[dates.length - 1];
+  const latestRows = allSnapshots.filter(r => r[0] === latest);
+
+  const total = latestRows.reduce((s, r) => s + parseInt(r[2]) || 0, 0);
+  document.getElementById("m-total").textContent = total.toLocaleString();
+
+  const top = [...latestRows].sort((a, b) => (parseInt(b[2]) || 0) - (parseInt(a[2]) || 0))[0];
+  if (top) {
+    document.getElementById("m-top").textContent = top[1];
+    document.getElementById("m-top-sub").textContent = parseInt(top[2]).toLocaleString() + " listings";
+  }
+
+  const totalRemoved = allSnapshots.reduce((s, r) => s + (parseInt(r[4]) || 0), 0);
+  const dayCount = dates.length || 1;
+  document.getElementById("m-removed").textContent = Math.round(totalRemoved / dayCount).toLocaleString();
+  document.getElementById("last-updated").textContent = "Last updated: " + latest;
+
+  const filters = document.getElementById("market-filters");
+  filters.innerHTML = "";
+  MARKETS.forEach(m => {
+    const b = document.createElement("button");
+    b.className = "filter-btn" + (activeMarkets.has(m) ? " on" : "");
+    b.textContent = m;
+    b.style.borderColor = COLORS[m];
+    if (activeMarkets.has(m)) b.style.background = COLORS[m];
+    b.onclick = () => {
+      if (activeMarkets.has(m)) activeMarkets.delete(m);
+      else activeMarkets.add(m);
+      buildOverview();
+    };
+    filters.appendChild(b);
+  });
+
+  const datasets = MARKETS.filter(m => activeMarkets.has(m)).map(m => ({
+    label: m,
+    data: dates.map(d => {
+      const r = allSnapshots.find(x => x[0] === d && x[1] === m);
+      return r ? parseInt(r[2]) || null : null;
+    }),
+    borderColor: COLORS[m], backgroundColor: COLORS[m] + "15",
+    tension: 0.3, pointRadius: 2, borderWidth: 2, fill: false
+  }));
+
+  mkChart("chart-listings", {
+    type: "line",
+    data: { labels: dates, datasets },
+    options: { ...baseOpts(v => v.toLocaleString()), plugins: { legend: { display: true, position: "top", labels: { boxWidth: 10, font: { size: 11 } } } } }
+  });
+}
+
+function buildVelocity() {
+  const dates = uniqueDates(allSnapshots);
+  const newData = dates.map(d => allSnapshots.filter(r => r[0] === d).reduce((s, r) => s + (parseInt(r[3]) || 0), 0));
+  const removedData = dates.map(d => allSnapshots.filter(r => r[0] === d).reduce((s, r) => s + (parseInt(r[4]) || 0), 0));
+  const netData = newData.map((v, i) => v - removedData[i]);
+
+  mkChart("chart-new", { type: "bar", data: { labels: dates, datasets: [{ data: newData, backgroundColor: "#16a34a", borderRadius: 3 }] }, options: baseOpts(v => v.toLocaleString()) });
+  mkChart("chart-removed", { type: "bar", data: { labels: dates, datasets: [{ data: removedData, backgroundColor: "#dc2626", borderRadius: 3 }] }, options: baseOpts(v => v.toLocaleString()) });
+  mkChart("chart-net", { type: "bar", data: { labels: dates, datasets: [{ data: netData, backgroundColor: netData.map(v => v >= 0 ? "#16a34a" : "#dc2626"), borderRadius: 3 }] }, options: baseOpts(v => v.toLocaleString()) });
+}
+
+function buildPrices() {
+  const filters = document.getElementById("price-market-filters");
+  filters.innerHTML = "";
+  MARKETS.forEach(m => {
+    const b = document.createElement("button");
+    b.className = "filter-btn" + (activePriceMarket === m ? " on" : "");
+    b.textContent = m;
+    b.onclick = () => { activePriceMarket = m; buildPrices(); };
+    filters.appendChild(b);
+  });
+
+  const dates = uniqueDates(allPrices.filter(r => r[1] === activePriceMarket));
+  const latest = dates[dates.length - 1];
+  const rows = allPrices.filter(r => r[0] === latest && r[1] === activePriceMarket);
+  rows.sort((a, b) => (parseFloat(b[3]) || 0) - (parseFloat(a[3]) || 0));
+  const top20 = rows.slice(0, 20);
+
+  mkChart("chart-prices", {
+    type: "bar",
+    data: {
+      labels: top20.map(r => r[2]),
+      datasets: [{ data: top20.map(r => parseFloat(r[3]) || 0), backgroundColor: "#2563eb", borderRadius: 4, barThickness: 18 }]
+    },
+    options: {
+      ...baseOpts(v => "€" + Math.round(v / 1000) + "k"),
+      indexAxis: "y",
+      plugins: { legend: { display: false } }
+    }
+  });
+}
+
+document.querySelectorAll(".tab").forEach(t => {
+  t.addEventListener("click", () => {
+    document.querySelectorAll(".tab").forEach(x => x.classList.remove("on"));
+    document.querySelectorAll(".panel").forEach(x => x.classList.remove("on"));
+    t.classList.add("on");
+    document.getElementById("panel-" + t.dataset.tab).classList.add("on");
+    if (t.dataset.tab === "velocity") buildVelocity();
+    if (t.dataset.tab === "prices") buildPrices();
+  });
+});
+
+(async () => {
+  try {
+    [allSnapshots, allPrices] = await Promise.all([
+      fetchSheet("daily_snapshots"),
+      fetchSheet("prices_by_make")
+    ]);
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("panel-overview").classList.add("on");
+    buildOverview();
+  } catch (e) {
+    document.getElementById("loading").textContent = "Error loading data: " + e.message;
+  }
+})();
+</script>
+</body>
+</html>
