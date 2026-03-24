@@ -98,8 +98,11 @@ def collect():
             "country": country,
             "total": len(listings),
             "ids": [l["id"] for l in listings],
-            "avg_prices_by_make": {
-                make: round(sum(p) / len(p), 2)
+            "prices_by_make": {
+                make: {
+                    "avg": round(sum(p) / len(p), 2),
+                    "count": len(p)
+                }
                 for make, p in prices_by_make.items()
             }
         })
@@ -125,8 +128,9 @@ def write_all(client, data, yesterday_cache):
 
         snapshot_rows.append([today, country, total, new, removed])
         breakdown_rows.append([today, country, total])
-        for make, avg_price in market["avg_prices_by_make"].items():
-            price_rows.append([today, country, make, avg_price])
+
+        for make, stats in market["prices_by_make"].items():
+            price_rows.append([today, country, make, stats["avg"], stats["count"]])
 
     print("\nWriting to Google Sheets...")
     get_sheet(client, "daily_snapshots").append_rows(snapshot_rows, value_input_option="USER_ENTERED")
