@@ -3,7 +3,6 @@ import gspread
 from google.oauth2.service_account import Credentials
 import json
 from datetime import date
-from pathlib import Path
 from time import sleep
 
 # --- Config ---
@@ -18,7 +17,36 @@ HEADERS = {
 }
 MARKETS = ["DE", "FR", "ES", "IT", "NL", "BE", "PL", "AT"]
 PAGE_SIZE = 100
-YESTERDAY_IDS_PATH = "yesterday_ids.json"
+
+# --- Sheets client ---
+def get_client():
+    creds = Credentials.from_service_account_file("service_account.json", scopes=SCOPES)
+    return gspread.authorize(creds).open_by_key(SHEET_ID)
+
+def get_sheet(client, tab_name):
+    return client.worksheet(tab_name)
+
+# --- ID cache (persisted in Google Sheets) ---
+def load_id_cache(client):
+    ws = get_sheet(client, "id_cache")
+    rows = ws.get_all_values()
+    cache = {}
+    for row in rows:
+        if len(row) >= 2:
+            country, ids_json = row[0], row[1]
+            try:
+                cache[country] = set(json.loads(ids_json))
+            except:
+                pass
+    print(f"Loaded ID cache for {list(cache.keys())}")
+    return cache
+
+def save_id_cache(client, today_ids):
+    ws = get_sheet(client, "id_cache")
+    ws.clear()
+    rows = [[country, json.dumps(list(ids))] for country, ids in today_ids.items()]
+    ws.update(rows, "A1")
+    print(f"Saved ID cache for {list(today_ids.keys())}")
 
 # --- Collection ---
 def search(country, offset=0, limit=PAGE_SIZE):
@@ -81,20 +109,8 @@ def collect():
     return results
 
 # --- Writing ---
-def get_sheet(tab_name):
-    creds = Credentials.from_service_account_file("service_account.json", scopes=SCOPES)
-    gc = gspread.authorize(creds)
-    return gc.open_by_key(SHEET_ID).worksheet(tab_name)
-
-def write_all(data):
+def write_all(client, data, yesterday_cache):
     today = str(date.today())
-
-    # Load yesterday's IDs
-    if Path(YESTERDAY_IDS_PATH).exists():
-        yesterday = json.loads(Path(YESTERDAY_IDS_PATH).read_text())
-    else:
-        yesterday = {}
-
     today_ids = {}
     snapshot_rows = []
     breakdown_rows = []
@@ -104,51 +120,45 @@ def write_all(data):
         country = market["country"]
         total = market["total"]
         current_ids = set(market["ids"])
-        today_ids[country] = list(current_ids)
+        today_ids[country] = current_ids
 
-        prev_ids = set(yesterday.get(country, []))
+        prev_ids = yesterday_cache.get(country, set())
         new = len(current_ids - prev_ids) if prev_ids else 0
         removed = len(prev_ids - current_ids) if prev_ids else 0
 
         snapshot_rows.append([today, country, total, new, removed])
         breakdown_rows.append([today, country, total])
-
         for make, avg_price in market["avg_prices_by_make"].items():
             price_rows.append([today, country, make, avg_price])
 
     print("\nWriting to Google Sheets...")
-    get_sheet("daily_snapshots").append_rows(snapshot_rows, value_input_option="USER_ENTERED")
+    get_sheet(client, "daily_snapshots").append_rows(snapshot_rows, value_input_option="USER_ENTERED")
     print(f"  daily_snapshots: {len(snapshot_rows)} rows")
-
-    get_sheet("market_breakdown").append_rows(breakdown_rows, value_input_option="USER_ENTERED")
+    get_sheet(client, "market_breakdown").append_rows(breakdown_rows, value_input_option="USER_ENTERED")
     print(f"  market_breakdown: {len(breakdown_rows)} rows")
-
-    get_sheet("prices_by_make").append_rows(price_rows, value_input_option="USER_ENTERED")
+    get_sheet(client, "prices_by_make").append_rows(price_rows, value_input_option="USER_ENTERED")
     print(f"  prices_by_make: {len(price_rows)} rows")
 
-    Path(YESTERDAY_IDS_PATH).write_text(json.dumps(today_ids))
-    print("  yesterday_ids.json updated")
+    return today_ids
 
 # --- Main ---
 def run():
     print("=== AutoHero daily collection ===")
     print(f"Date: {date.today()}")
+
+    client = get_client()
+    yesterday_cache = load_id_cache(client)
     data = collect()
-    write_all(data)
+    today_ids = write_all(client, data, yesterday_cache)
+    save_id_cache(client, today_ids)
 
     print("\n=== Summary ===")
     print(f"{'Country':<10} {'Total':>8} {'New':>8} {'Removed':>8}")
     print("-" * 36)
-
-    if Path(YESTERDAY_IDS_PATH).exists():
-        yesterday = json.loads(Path(YESTERDAY_IDS_PATH).read_text())
-    else:
-        yesterday = {}
-
     for m in data:
         c = m["country"]
         curr = set(m["ids"])
-        prev = set(yesterday.get(c, []))
+        prev = yesterday_cache.get(c, set())
         new = len(curr - prev) if prev else 0
         removed = len(prev - curr) if prev else 0
         print(f"{c:<10} {m['total']:>8,} {new:>8,} {removed:>8,}")
