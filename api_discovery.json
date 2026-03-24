@@ -1,0 +1,925 @@
+[
+  {
+    "url": "https://www.autohero.com/de/search/",
+    "method": "GET",
+    "resource_type": "document",
+    "body": null
+  },
+  {
+    "url": "https://img-eu-c1.autohero.com/img/886c0ca2682a957511c1f4bc22d1ba6c4a5d3e0497d1476c82710a0485dcb9b5/exterior/1/768x432-1291c4d98c4e488bbe56e4ddd69c1d27.jpg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://img-eu-c1.autohero.com/img/4777e720ef03f57927e2c39d25712f1fcda64380c97f34ae50680fe90c5550d4/exterior/1/768x432-01782043d5e4431e952cca0e5a5e0d36.jpg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://img-eu-c1.autohero.com/img/1824b9ca47d27732a53803b10631398a4ec5929ab00d502cf42056fd5cb90799/exterior/1/768x432-ee2c333ec6ed40a4868cf09903544a19.jpg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://img-eu-c1.autohero.com/img/e6210df7a49b159ed5d2491ee6d7a0678465bdd7c243b7dfe9828b598f9d6420/exterior/1/768x432-936f09175f09435ea211309fd380deb4.jpg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://img-eu-c1.autohero.com/img/e3d35d8cb8dade539e396949d13e2278fd5dd3401f3b9c0761cf619bdc5ffdd9/exterior/1/768x432-3e3eea3a97fc4ef588091aa92a4472c8.jpg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://img-eu-c1.autohero.com/img/d0cabda6acf26662a6e69b092abe61a67fc388fec941f21ae6886153e7bd2ff3/exterior/1/768x432-45bce9f2c4af4cb88e9661dc93680d68.jpg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/ah-watermark-9d5f3410d63e0123f0977bf1e133c6dd.svg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/dark-469d22d42d796e1b56670f12f45a9a9a.svg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/usp-all-wheel-drive-f85f9f08ad1acf10f56cf9fe836f1db0.svg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/usp-good-as-new-945e2328e7596619ebb1119e0624579e.svg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/usp-maintained-17f8b15ce1a4c917aca02556da5e357d.svg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/usp-mileage-6a2631c8f629a5e2cb083b0e30694308.svg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/usp-owner-fc230a2f7af4f57244c605617311362e.svg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/usp-seats-b0553d27b0d9c9e70a05bc47f8f2d762.svg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/usp-tax-4b6acddc0350ae4160c203c919e4e65e.svg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://content.autohero.com/static/car_images/Ad-tile-1440-Transparent2.png",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://content.autohero.com/static/car_images/search-usp-financing_2x.webp",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://content.autohero.com/static/car_images/stars.png",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://content.autohero.com/static/car_images/trade-in.svg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://content.autohero.com/static/car_images/icons-usp-truck-64.svg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/Lato300-880988045e8ce30f.woff2",
+    "method": "GET",
+    "resource_type": "font",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/Lato300-Latin-ext-9626065e32893d49.woff2",
+    "method": "GET",
+    "resource_type": "font",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/Lato400-28777f2d837b799c.woff2",
+    "method": "GET",
+    "resource_type": "font",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/Lato400-Latin-ext-1502bd213e25ba3e.woff2",
+    "method": "GET",
+    "resource_type": "font",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/Lato700-400b60eed27dfb33.woff2",
+    "method": "GET",
+    "resource_type": "font",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/Lato700-Latin-ext-633da1f25676cae8.woff2",
+    "method": "GET",
+    "resource_type": "font",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/Lato900-7bb39e817a36d930.woff2",
+    "method": "GET",
+    "resource_type": "font",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/Lato900-Latin-ext-dd7e11d97e6f9605.woff2",
+    "method": "GET",
+    "resource_type": "font",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/css/main-95d796c71d57be20.css",
+    "method": "GET",
+    "resource_type": "stylesheet",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/header-fd09281c47694e2eeecdff3b3658b938.svg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/chatbot-icon-6077a0aa6558ade06f5e055d0e2618df.svg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/js/main-e1ef1b7373f1a22f.js",
+    "method": "GET",
+    "resource_type": "script",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/arrow-close-icon-503f87a4cac73f5d.svg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/ah-watermark-bf74a140608fc91e.svg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-push-notification/notifications?sessionId=755d056c-37ea-4da6-b62a-735931511158",
+    "method": "GET",
+    "resource_type": "fetch",
+    "body": null
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-customer-gateway/graphql/TrackAdSearch",
+    "method": "POST",
+    "resource_type": "xhr",
+    "body": {
+      "operationName": "TrackAdSearch",
+      "variables": {
+        "adSearchTracking": {
+          "count": 9347,
+          "sortedBy": "MOST_POPULAR_EXCLUDE_A",
+          "searchId": "a691e342-f257-43ed-adf2-a5dca423a5c3",
+          "searchBarQuery": "",
+          "success": true,
+          "userSearchRequest": {
+            "limit": 24,
+            "offset": 0,
+            "sort": "most_popular",
+            "filter": {
+              "field": "countryCode",
+              "op": "eq",
+              "value": "DE"
+            },
+            "aggs": [],
+            "postFilter": null,
+            "fields": [
+              "registration",
+              "firstEligibleToBePurchasedAt",
+              "variablePositioning"
+            ],
+            "properties": {
+              "firstPublishedDays": -30,
+              "shuffleCategoryBResults": true,
+              "resultsCombiner": "abbabbc",
+              "filterByEligibleDate": true,
+              "includeProspective": true
+            }
+          },
+          "searchType": "default",
+          "referrer": "",
+          "page": "search_page",
+          "searchSource": "regular_search",
+          "countryCode": "DE",
+          "deviceType": "desktop",
+          "cid": null,
+          "sessionId": "755d056c-37ea-4da6-b62a-735931511158",
+          "urlPath": "/de/search/"
+        }
+      },
+      "query": "mutation TrackAdSearch($adSearchTracking: RetailAdSearchTrackingProjectionInput!, $targetUserId: UUID) {\n  trackAdSearch(adSearchTracking: $adSearchTracking, targetUserId: $targetUserId)\n}"
+    }
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/css/main-2988def58b45b03b.css",
+    "method": "GET",
+    "resource_type": "stylesheet",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/js/main-b2538b35e2d21a06.js",
+    "method": "GET",
+    "resource_type": "script",
+    "body": null
+  },
+  {
+    "url": "https://img-eu-c1.autohero.com/img/017b63942584fe568eabef7f3e393a0fb5c1ad12e21960839b6f8c04117ef6fb/exterior/1/768x432-b71f1572398d498db3ad80c3a048b8a8.jpg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://img-eu-c1.autohero.com/img/017b63942584fe568eabef7f3e393a0fb5c1ad12e21960839b6f8c04117ef6fb/exterior/1/16x9-b71f1572398d498db3ad80c3a048b8a8.jpg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://img-eu-c1.autohero.com/img/cbafd3115412ad98eaf471f6d400e15a593ed3cdb849094b0dcb35cbf897c010/exterior/1/768x432-5ad7634e21ca49faa5538f641ec9639b.jpg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://img-eu-c1.autohero.com/img/cbafd3115412ad98eaf471f6d400e15a593ed3cdb849094b0dcb35cbf897c010/exterior/1/16x9-5ad7634e21ca49faa5538f641ec9639b.jpg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/dark-short-7c6237f2e32b032b9b2ee1fa72b78e01.svg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://content.autohero.com/static/car_images/app-store_de.png",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://content.autohero.com/static/car_images/GetItOnGooglePlay_Badge_Web_color_German.png",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/master/icons/icon_32x32.png",
+    "method": "GET",
+    "resource_type": "other",
+    "body": null
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-customer-gateway/graphql/GetABTestingVariant",
+    "method": "POST",
+    "resource_type": "xhr",
+    "body": {
+      "operationName": "GetABTestingVariant",
+      "variables": {
+        "country": "DE",
+        "locale": "de-DE",
+        "viewName": "CAR_SEARCH",
+        "auxUserId": null,
+        "visitorId": "755d056c-37ea-4da6-b62a-735931511158",
+        "deviceType": "desktop",
+        "targetUserId": null
+      },
+      "query": "query GetABTestingVariant($adId: String, $viewName: String!, $country: String!, $locale: String!, $visitorId: String!, $auxUserId: String, $deviceType: String, $forceExperimentName: String, $forceVariantIndex: Int, $environment: String, $targetUserId: UUID, $zipCode: String, $orderId: UUID) {\n  abTestingVariant(\n    context: {adId: $adId, viewName: $viewName, country: $country, locale: $locale, visitorId: $visitorId, auxUserId: $auxUserId, deviceType: $deviceType, forceExperimentName: $forceExperimentName, forceVariantIndex: $forceVariantIndex, environment: $environment, zipCode: $zipCode, orderId: $orderId}\n    targetUserId: $targetUserId\n  ) {\n    id\n    gaExperimentId\n    gaVariationId\n    viewVariant\n    viewParams\n    __typename\n  }\n}"
+    }
+  },
+  {
+    "url": "https://tags.creativecdn.com/11ABInXDmeTrvI62g12S.js",
+    "method": "GET",
+    "resource_type": "script",
+    "body": null
+  },
+  {
+    "url": "https://ams.creativecdn.com/tags/v2?type=json",
+    "method": "POST",
+    "resource_type": "fetch",
+    "body": {
+      "v": "v0.2.1",
+      "sr": "",
+      "su": "https://www.autohero.com/de/search/",
+      "th": "11ABInXDmeTrvI62g12S",
+      "tags": [
+        {
+          "eventType": "lid",
+          "id": "NaDGoATCfyERI2RsqhdZ",
+          "expiryDate": "2027-03-23T22:34:51.567Z"
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-customer-gateway/graphql/trackSession",
+    "method": "POST",
+    "resource_type": "xhr",
+    "body": {
+      "operationName": "trackSession",
+      "variables": {
+        "sessionTracking": {
+          "sessionId": "755d056c-37ea-4da6-b62a-735931511158",
+          "country": "DE",
+          "platform": "BROWSER",
+          "browserName": "Chrome",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
+        }
+      },
+      "query": "mutation trackSession($sessionTracking: SessionTrackingProjectionInput!) {\n  trackSession(sessionTracking: $sessionTracking)\n}"
+    }
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-customer-gateway/graphql/trackPageView",
+    "method": "POST",
+    "resource_type": "xhr",
+    "body": {
+      "operationName": "trackPageView",
+      "variables": {
+        "autoheroPageViewTracking": {
+          "sessionId": "755d056c-37ea-4da6-b62a-735931511158",
+          "pageType": "search",
+          "pageUrl": "/de/search/",
+          "deviceType": "DESKTOP"
+        },
+        "targetUserId": null
+      },
+      "query": "mutation trackPageView($autoheroPageViewTracking: RetailAutoheroPageViewTrackingProjectionInput!, $targetUserId: UUID) {\n  trackAutoheroPageView(\n    autoheroPageViewTracking: $autoheroPageViewTracking\n    targetUserId: $targetUserId\n  )\n}"
+    }
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-customer-gateway/graphql/trackRetailCid",
+    "method": "POST",
+    "resource_type": "xhr",
+    "body": {
+      "operationName": "trackRetailCid",
+      "variables": {
+        "eventName": "PAGE_VIEW",
+        "sessionId": "755d056c-37ea-4da6-b62a-735931511158",
+        "referer": "",
+        "page": "search",
+        "country": "DE",
+        "pageUrl": "https://www.autohero.com/de/search/",
+        "cid": "DE_OES_3_28_3747_0_0_1&_cl=1774305291_dplatform=web"
+      },
+      "query": "mutation trackRetailCid($eventName: String!, $cid: String, $sessionId: UUID!, $referer: String, $adId: UUID, $orderId: UUID, $targetUserId: UUID, $linkedSessionId: UUID, $page: String, $metadata: Map_String_ObjectScalar, $country: String, $pageUrl: String) {\n  trackRetailCIDV2(\n    eventName: $eventName\n    cid: $cid\n    adId: $adId\n    sessionId: $sessionId\n    referer: $referer\n    orderId: $orderId\n    targetUserId: $targetUserId\n    linkedSessionId: $linkedSessionId\n    page: $page\n    metadata: $metadata\n    country: $country\n    pageUrl: $pageUrl\n  )\n}"
+    }
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-customer-gateway/graphql/trackRetailCid",
+    "method": "POST",
+    "resource_type": "xhr",
+    "body": {
+      "operationName": "trackRetailCid",
+      "variables": {
+        "eventName": "SEARCH_PAGE",
+        "sessionId": "755d056c-37ea-4da6-b62a-735931511158",
+        "referer": "",
+        "page": "search",
+        "country": "DE",
+        "pageUrl": "https://www.autohero.com/de/search/",
+        "cid": "DE_OES_3_28_3747_0_0_1&_cl=1774305291_dplatform=web"
+      },
+      "query": "mutation trackRetailCid($eventName: String!, $cid: String, $sessionId: UUID!, $referer: String, $adId: UUID, $orderId: UUID, $targetUserId: UUID, $linkedSessionId: UUID, $page: String, $metadata: Map_String_ObjectScalar, $country: String, $pageUrl: String) {\n  trackRetailCIDV2(\n    eventName: $eventName\n    cid: $cid\n    adId: $adId\n    sessionId: $sessionId\n    referer: $referer\n    orderId: $orderId\n    targetUserId: $targetUserId\n    linkedSessionId: $linkedSessionId\n    page: $page\n    metadata: $metadata\n    country: $country\n    pageUrl: $pageUrl\n  )\n}"
+    }
+  },
+  {
+    "url": "https://mpc2-prod-25-is5qnl632q-wl.a.run.app/events?cee=no",
+    "method": "POST",
+    "resource_type": "fetch",
+    "body": {
+      "event_name": "SearchPageView",
+      "automatic_parameters": {
+        "currency": "EUR",
+        "contents": "[{\"item_price\":26550,\"availability\":\"InStock\",\"id\":\"be602276-7c0f-4108-8408-10300b651296\"},{\"item_price\":38330,\"availability\":\"InStock\",\"id\":\"093506a8-0bd9-488e-8bbe-62ac60fa4edd\"},{\"item_price\":20790,\"availability\":\"InStock\",\"id\":\"5927d875-abcd-4428-9d53-7cc0e2ab1b31\"},{\"item_price\":10910,\"availability\":\"InStock\",\"id\":\"621a943f-d822-4b18-a9bd-09c406fc9908\"},{\"item_price\":12430,\"availability\":\"InStock\",\"id\":\"d61fe56e-3198-4ec8-a1d9-a9d5344d6fd5\"},{\"item_price\":22800,\"availability\":\"InStock\",\"id\":\"551410dc-febe-4df0-bca7-fcfb287a1fe3\"},{\"item_price\":12750,\"availability\":\"InStock\",\"id\":\"09b84985-2792-47a5-9699-d1d1d39aaf1f\"},{\"item_price\":17570,\"availability\":\"InStock\",\"id\":\"82437cd1-d0ea-4643-94b5-458cd587143e\"},{\"item_price\":23090,\"availability\":\"InStock\",\"id\":\"f6f9093a-0533-4d25-ad74-2e7b80869f68\"},{\"item_price\":22490,\"availability\":\"InStock\",\"id\":\"e59821c5-d78d-448d-a267-04da48493205\"},{\"item_price\":13730,\"availability\":\"InStock\",\"id\":\"5362113a-03e5-4666-a5de-1e97f20235b9\"},{\"item_price\":16610,\"availability\":\"InStock\",\"id\":\"8f7a249d-3d7a-4851-b002-3fedec067954\"}]"
+      },
+      "fb.dynamic_product_ads": {},
+      "custom_data": {},
+      "event_id": "ob3_plugin-set_afdfa8df4364a158036e6e6045c13a8e8eccda31e028fb869336f1ae013855c7",
+      "fb.pixel_id": "547129753113024",
+      "fb.advanced_matching": {},
+      "website_context": {
+        "location": "https://www.autohero.com/de/search/",
+        "referrer": "",
+        "isInIFrame": false
+      },
+      "fb.fbp": "fb.1.1774305292085.39635387853959612",
+      "event_meta_info": {
+        "experiment_detail": {
+          "name": "CEE_STRONG_PII",
+          "is_exposed": false,
+          "is_in_control": false,
+          "is_in_treatment": true
+        }
+      }
+    }
+  },
+  {
+    "url": "https://mpc2-prod-25-is5qnl632q-wl.a.run.app/events?cee=no",
+    "method": "POST",
+    "resource_type": "fetch",
+    "body": {
+      "event_name": "Search",
+      "automatic_parameters": {
+        "currency": "EUR",
+        "contents": "[{\"item_price\":26550,\"availability\":\"InStock\",\"id\":\"be602276-7c0f-4108-8408-10300b651296\"},{\"item_price\":38330,\"availability\":\"InStock\",\"id\":\"093506a8-0bd9-488e-8bbe-62ac60fa4edd\"},{\"item_price\":20790,\"availability\":\"InStock\",\"id\":\"5927d875-abcd-4428-9d53-7cc0e2ab1b31\"},{\"item_price\":10910,\"availability\":\"InStock\",\"id\":\"621a943f-d822-4b18-a9bd-09c406fc9908\"},{\"item_price\":12430,\"availability\":\"InStock\",\"id\":\"d61fe56e-3198-4ec8-a1d9-a9d5344d6fd5\"},{\"item_price\":22800,\"availability\":\"InStock\",\"id\":\"551410dc-febe-4df0-bca7-fcfb287a1fe3\"},{\"item_price\":12750,\"availability\":\"InStock\",\"id\":\"09b84985-2792-47a5-9699-d1d1d39aaf1f\"},{\"item_price\":17570,\"availability\":\"InStock\",\"id\":\"82437cd1-d0ea-4643-94b5-458cd587143e\"},{\"item_price\":23090,\"availability\":\"InStock\",\"id\":\"f6f9093a-0533-4d25-ad74-2e7b80869f68\"},{\"item_price\":22490,\"availability\":\"InStock\",\"id\":\"e59821c5-d78d-448d-a267-04da48493205\"},{\"item_price\":13730,\"availability\":\"InStock\",\"id\":\"5362113a-03e5-4666-a5de-1e97f20235b9\"},{\"item_price\":16610,\"availability\":\"InStock\",\"id\":\"8f7a249d-3d7a-4851-b002-3fedec067954\"}]"
+      },
+      "custom_data": {
+        "content_type": "vehicle_offer",
+        "content_ids": [
+          null
+        ],
+        "make": "undefined"
+      },
+      "event_id": "ob3_plugin-set_7942bfd855c06b0dd39ead113efee371fabec16e8b309c094d073417c874e1d7",
+      "fb.pixel_id": "547129753113024",
+      "fb.advanced_matching": {},
+      "website_context": {
+        "location": "https://www.autohero.com/de/search/",
+        "referrer": "",
+        "isInIFrame": false
+      },
+      "fb.fbp": "fb.1.1774305292085.39635387853959612",
+      "event_meta_info": {
+        "experiment_detail": {
+          "name": "CEE_STRONG_PII",
+          "is_exposed": false,
+          "is_in_control": false,
+          "is_in_treatment": true
+        }
+      }
+    }
+  },
+  {
+    "url": "https://ams.creativecdn.com/tags/v2?type=json&tc=1",
+    "method": "POST",
+    "resource_type": "fetch",
+    "body": {
+      "v": "v0.2.1",
+      "sr": "",
+      "su": "https://www.autohero.com/de/search/",
+      "th": "11ABInXDmeTrvI62g12S",
+      "tags": [
+        {
+          "eventType": "lid",
+          "id": "NaDGoATCfyERI2RsqhdZ",
+          "expiryDate": "2027-03-23T22:34:51.567Z"
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-customer-gateway/graphql/trackRetailCid",
+    "method": "POST",
+    "resource_type": "xhr",
+    "body": {
+      "operationName": "trackRetailCid",
+      "variables": {
+        "eventName": "SEARCH_BAR_FOCUS",
+        "sessionId": "755d056c-37ea-4da6-b62a-735931511158",
+        "referer": "",
+        "page": "search",
+        "metadata": {
+          "source": "top search bar"
+        },
+        "country": "DE",
+        "pageUrl": "https://www.autohero.com/de/search/",
+        "cid": "DE_OES_3_28_3747_0_0_1&_cl=1774305291_dplatform=web"
+      },
+      "query": "mutation trackRetailCid($eventName: String!, $cid: String, $sessionId: UUID!, $referer: String, $adId: UUID, $orderId: UUID, $targetUserId: UUID, $linkedSessionId: UUID, $page: String, $metadata: Map_String_ObjectScalar, $country: String, $pageUrl: String) {\n  trackRetailCIDV2(\n    eventName: $eventName\n    cid: $cid\n    adId: $adId\n    sessionId: $sessionId\n    referer: $referer\n    orderId: $orderId\n    targetUserId: $targetUserId\n    linkedSessionId: $linkedSessionId\n    page: $page\n    metadata: $metadata\n    country: $country\n    pageUrl: $pageUrl\n  )\n}"
+    }
+  },
+  {
+    "url": "https://ib.adnxs.com/setuid?entity=315&code=G6O2dDL0o2C89YJ5JZfNYZ35Y-t1XzygIkcsKfE3xlU&consent=1",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-customer-gateway/graphql/trackRetailCid",
+    "method": "POST",
+    "resource_type": "xhr",
+    "body": {
+      "operationName": "trackRetailCid",
+      "variables": {
+        "eventName": "GOOGLE_ONE_TAP_DISMISS",
+        "sessionId": "755d056c-37ea-4da6-b62a-735931511158",
+        "referer": "",
+        "page": "search",
+        "country": "DE",
+        "pageUrl": "https://www.autohero.com/de/search/",
+        "cid": "DE_OES_3_28_3747_0_0_1&_cl=1774305291_dplatform=web"
+      },
+      "query": "mutation trackRetailCid($eventName: String!, $cid: String, $sessionId: UUID!, $referer: String, $adId: UUID, $orderId: UUID, $targetUserId: UUID, $linkedSessionId: UUID, $page: String, $metadata: Map_String_ObjectScalar, $country: String, $pageUrl: String) {\n  trackRetailCIDV2(\n    eventName: $eventName\n    cid: $cid\n    adId: $adId\n    sessionId: $sessionId\n    referer: $referer\n    orderId: $orderId\n    targetUserId: $targetUserId\n    linkedSessionId: $linkedSessionId\n    page: $page\n    metadata: $metadata\n    country: $country\n    pageUrl: $pageUrl\n  )\n}"
+    }
+  },
+  {
+    "url": "https://ib.adnxs.com/bounce?%2Fsetuid%3Fentity%3D315%26code%3DG6O2dDL0o2C89YJ5JZfNYZ35Y-t1XzygIkcsKfE3xlU%26consent%3D1",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-customer-gateway/graphql/getSearchBarSuggestions",
+    "method": "POST",
+    "resource_type": "xhr",
+    "body": {
+      "operationName": "getSearchBarSuggestions",
+      "variables": {
+        "size": 10,
+        "locale": "de_DE",
+        "query": "bmw"
+      },
+      "query": "query getSearchBarSuggestions($size: Int!, $locale: String!, $query: String!) {\n  result: getSearchBarSuggestions(\n    size: $size\n    locale: $locale\n    query: $query\n    strategy: \"phrases_first\"\n  ) {\n    type\n    suggestions {\n      suggestion\n      __typename\n    }\n    __typename\n  }\n}"
+    }
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-customer-gateway/graphql/trackRetailCid",
+    "method": "POST",
+    "resource_type": "xhr",
+    "body": {
+      "operationName": "trackRetailCid",
+      "variables": {
+        "eventName": "CHATBOT_CHAT_INVITATION_VISIBILE",
+        "sessionId": "755d056c-37ea-4da6-b62a-735931511158",
+        "referer": "",
+        "page": "search",
+        "country": "DE",
+        "pageUrl": "https://www.autohero.com/de/search/",
+        "cid": "DE_OES_3_28_3747_0_0_1&_cl=1774305291_dplatform=web"
+      },
+      "query": "mutation trackRetailCid($eventName: String!, $cid: String, $sessionId: UUID!, $referer: String, $adId: UUID, $orderId: UUID, $targetUserId: UUID, $linkedSessionId: UUID, $page: String, $metadata: Map_String_ObjectScalar, $country: String, $pageUrl: String) {\n  trackRetailCIDV2(\n    eventName: $eventName\n    cid: $cid\n    adId: $adId\n    sessionId: $sessionId\n    referer: $referer\n    orderId: $orderId\n    targetUserId: $targetUserId\n    linkedSessionId: $linkedSessionId\n    page: $page\n    metadata: $metadata\n    country: $country\n    pageUrl: $pageUrl\n  )\n}"
+    }
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-customer-gateway/retail-autohero-cid-tracking/track-v2?wa_key=tradein-de-pPOsii3cFZ",
+    "method": "POST",
+    "resource_type": "ping",
+    "body": null
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-customer-gateway/graphql/trackRetailCid",
+    "method": "POST",
+    "resource_type": "xhr",
+    "body": {
+      "operationName": "trackRetailCid",
+      "variables": {
+        "eventName": "SEARCH_BAR_AUTOCOMPLETE",
+        "sessionId": "755d056c-37ea-4da6-b62a-735931511158",
+        "referer": "",
+        "page": "search",
+        "metadata": {
+          "user_typing": "bmw",
+          "autocomplete_selected": "BMW"
+        },
+        "country": "DE",
+        "pageUrl": "https://www.autohero.com/de/search/",
+        "cid": "DE_OES_3_28_3747_0_0_1&_cl=1774305291_dplatform=web"
+      },
+      "query": "mutation trackRetailCid($eventName: String!, $cid: String, $sessionId: UUID!, $referer: String, $adId: UUID, $orderId: UUID, $targetUserId: UUID, $linkedSessionId: UUID, $page: String, $metadata: Map_String_ObjectScalar, $country: String, $pageUrl: String) {\n  trackRetailCIDV2(\n    eventName: $eventName\n    cid: $cid\n    adId: $adId\n    sessionId: $sessionId\n    referer: $referer\n    orderId: $orderId\n    targetUserId: $targetUserId\n    linkedSessionId: $linkedSessionId\n    page: $page\n    metadata: $metadata\n    country: $country\n    pageUrl: $pageUrl\n  )\n}"
+    }
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-customer-gateway/graphql/resolveSearchBarQuery",
+    "method": "POST",
+    "resource_type": "xhr",
+    "body": {
+      "operationName": "resolveSearchBarQuery",
+      "variables": {
+        "query": "BMW",
+        "locale": "de_DE"
+      },
+      "query": "query resolveSearchBarQuery($query: String!, $locale: String!) {\n  result: resolveSearchBarQuery(query: $query, locale: $locale) {\n    filter\n    normalizedQuery\n    additionalFilters {\n      displayName\n      filters {\n        field\n        operation\n        value\n        __typename\n      }\n      __typename\n    }\n    __typename\n  }\n}"
+    }
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-customer-gateway/graphql/getSearchBarSuggestions",
+    "method": "POST",
+    "resource_type": "xhr",
+    "body": {
+      "operationName": "getSearchBarSuggestions",
+      "variables": {
+        "size": 10,
+        "locale": "de_DE",
+        "query": "BMW"
+      },
+      "query": "query getSearchBarSuggestions($size: Int!, $locale: String!, $query: String!) {\n  result: getSearchBarSuggestions(\n    size: $size\n    locale: $locale\n    query: $query\n    strategy: \"phrases_first\"\n  ) {\n    type\n    suggestions {\n      suggestion\n      __typename\n    }\n    __typename\n  }\n}"
+    }
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-customer-gateway/retail-autohero-cid-tracking/track-v2?wa_key=tradein-de-pPOsii3cFZ",
+    "method": "POST",
+    "resource_type": "ping",
+    "body": null
+  },
+  {
+    "url": "https://mpc2-prod-25-is5qnl632q-wl.a.run.app/events?cee=no",
+    "method": "POST",
+    "resource_type": "fetch",
+    "body": {
+      "event_name": "PageView",
+      "automatic_parameters": {
+        "currency": "EUR",
+        "contents": "[{\"item_price\":26550,\"availability\":\"InStock\",\"id\":\"be602276-7c0f-4108-8408-10300b651296\"},{\"item_price\":38330,\"availability\":\"InStock\",\"id\":\"093506a8-0bd9-488e-8bbe-62ac60fa4edd\"},{\"item_price\":20790,\"availability\":\"InStock\",\"id\":\"5927d875-abcd-4428-9d53-7cc0e2ab1b31\"},{\"item_price\":10910,\"availability\":\"InStock\",\"id\":\"621a943f-d822-4b18-a9bd-09c406fc9908\"},{\"item_price\":12430,\"availability\":\"InStock\",\"id\":\"d61fe56e-3198-4ec8-a1d9-a9d5344d6fd5\"},{\"item_price\":22800,\"availability\":\"InStock\",\"id\":\"551410dc-febe-4df0-bca7-fcfb287a1fe3\"},{\"item_price\":12750,\"availability\":\"InStock\",\"id\":\"09b84985-2792-47a5-9699-d1d1d39aaf1f\"},{\"item_price\":17570,\"availability\":\"InStock\",\"id\":\"82437cd1-d0ea-4643-94b5-458cd587143e\"},{\"item_price\":23090,\"availability\":\"InStock\",\"id\":\"f6f9093a-0533-4d25-ad74-2e7b80869f68\"},{\"item_price\":22490,\"availability\":\"InStock\",\"id\":\"e59821c5-d78d-448d-a267-04da48493205\"},{\"item_price\":13730,\"availability\":\"InStock\",\"id\":\"5362113a-03e5-4666-a5de-1e97f20235b9\"},{\"item_price\":16610,\"availability\":\"InStock\",\"id\":\"8f7a249d-3d7a-4851-b002-3fedec067954\"}]"
+      },
+      "fb.dynamic_product_ads": {},
+      "custom_data": {},
+      "event_id": "ob3_plugin-set_a388b2ab506d08ae7805a49a033f7c86b4c8149fca769dcb5b0f2947c9991540",
+      "fb.pixel_id": "547129753113024",
+      "fb.advanced_matching": {},
+      "website_context": {
+        "location": "https://www.autohero.com/de/search/?brand0=bmw",
+        "referrer": "",
+        "isInIFrame": false
+      },
+      "fb.fbp": "fb.1.1774305292085.39635387853959612",
+      "event_meta_info": {
+        "experiment_detail": {
+          "name": "CEE_STRONG_PII",
+          "is_exposed": false,
+          "is_in_control": true,
+          "is_in_treatment": false
+        }
+      }
+    }
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-customer-gateway/graphql/searchAdV9AdsV2",
+    "method": "POST",
+    "resource_type": "xhr",
+    "body": {
+      "operationName": "searchAdV9AdsV2",
+      "variables": {
+        "search": {
+          "offset": 0,
+          "limit": 24,
+          "sort": "most_popular",
+          "filter": {
+            "field": null,
+            "op": "and",
+            "value": [
+              {
+                "field": "countryCode",
+                "op": "eq",
+                "value": "DE"
+              },
+              {
+                "field": "make",
+                "op": "eq",
+                "value": "130"
+              }
+            ]
+          },
+          "aggs": [],
+          "postFilter": null,
+          "fields": [
+            "registration",
+            "firstEligibleToBePurchasedAt",
+            "variablePositioning"
+          ],
+          "properties": {
+            "firstPublishedDays": -30,
+            "shuffleCategoryBResults": true,
+            "resultsCombiner": "abbabbc",
+            "filterByEligibleDate": true,
+            "includeProspective": true
+          }
+        }
+      },
+      "query": "query searchAdV9AdsV2($search: EsSearchRequestProjectionInput!, $tradeInId: UUID) {\n  searchAdV9AdsV2(search: $search, tradeInId: $tradeInId)\n}"
+    }
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/master/icons/icon_32x32.png",
+    "method": "GET",
+    "resource_type": "other",
+    "body": null
+  },
+  {
+    "url": "https://content.autohero.com/static/car_images/tink-footer.png",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://content.autohero.com/static/car_images/psd2-footer.png",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://content.autohero.com/static/car_images/youtube.png",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://content.autohero.com/static/car_images/instagram.png",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://content.autohero.com/static/car_images/autobild-footer-v2.png",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-customer-gateway/graphql/TrackAdSearch",
+    "method": "POST",
+    "resource_type": "xhr",
+    "body": {
+      "operationName": "TrackAdSearch",
+      "variables": {
+        "adSearchTracking": {
+          "count": 766,
+          "sortedBy": "MOST_POPULAR_EXCLUDE_A",
+          "searchId": "cd7e9e27-a06e-48c0-afa5-f7dae4752863",
+          "searchBarQuery": "BMW",
+          "success": true,
+          "userSearchRequest": {
+            "limit": 24,
+            "offset": 0,
+            "sort": "most_popular",
+            "filter": {
+              "field": null,
+              "op": "and",
+              "value": [
+                {
+                  "field": "countryCode",
+                  "op": "eq",
+                  "value": "DE"
+                },
+                {
+                  "field": "make",
+                  "op": "eq",
+                  "value": "130"
+                }
+              ]
+            },
+            "aggs": [],
+            "postFilter": null,
+            "fields": [
+              "registration",
+              "firstEligibleToBePurchasedAt",
+              "variablePositioning"
+            ],
+            "properties": {
+              "firstPublishedDays": -30,
+              "shuffleCategoryBResults": true,
+              "resultsCombiner": "abbabbc",
+              "filterByEligibleDate": true,
+              "includeProspective": true
+            }
+          },
+          "searchType": "custom",
+          "referrer": "",
+          "page": "search_page",
+          "searchSource": "search_bar",
+          "countryCode": "DE",
+          "deviceType": "desktop",
+          "cid": "DE_OES_3_28_3747_0_0_1&_cl=1774305291_dplatform=web",
+          "sessionId": "755d056c-37ea-4da6-b62a-735931511158",
+          "urlPath": "/de/search/?brand0=bmw"
+        }
+      },
+      "query": "mutation TrackAdSearch($adSearchTracking: RetailAdSearchTrackingProjectionInput!, $targetUserId: UUID) {\n  trackAdSearch(adSearchTracking: $adSearchTracking, targetUserId: $targetUserId)\n}"
+    }
+  },
+  {
+    "url": "https://img-eu-c1.autohero.com/img/c6c58ee5bd7453834185e50b64e99bd235ae89b8a0daf2e0cdb715afdc11e348/exterior/1/768x432-80a5809d5c7e42d692d06b62354cb7aa.jpg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://img-eu-c1.autohero.com/img/f359bf8ea5e027f1d5f9d2899d14190f525371ab135ac5547b1c579fdea44199/exterior/1/768x432-61b9f2199d1d493ba2ab867823d3abcb.jpg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://img-eu-c1.autohero.com/img/3bf4b5e5de76cc7299a9f0e4a12299886e6b69fbccd9772d0ad8a240931dd3a4/exterior/1/768x432-5fca9422086e42e59c430fcba9183317.jpg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://img-eu-c1.autohero.com/img/fb1892d6c53857ad2fc9665735be8af9d6de0766d3e45d6ee1d9c85d2c13cf43/exterior/1/768x432-fb0ddd694bad404e9805eb78d9b6e510.jpg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://img-eu-c1.autohero.com/img/eaf771b4777f1baad54ab61b1ddbf1042e21fc742732164ff941c20c9051a69b/exterior/1/768x432-2a0a0311e97b4c8da980587a4aac211e.jpg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://artifacts-cdn.autohero.com/retail-sharding/public/assets/usp-mileage-6a2631c8f629a5e2cb083b0e30694308.svg",
+    "method": "GET",
+    "resource_type": "image",
+    "body": null
+  },
+  {
+    "url": "https://api-customer.prod.retail.auto1.cloud/v1/retail-customer-gateway/graphql/recordBarSearchResultInfo",
+    "method": "POST",
+    "resource_type": "xhr",
+    "body": {
+      "operationName": "recordBarSearchResultInfo",
+      "variables": {
+        "barSearchResultInfo": {
+          "success": true,
+          "normalizedQuery": "BMW",
+          "locale": "de_DE",
+          "adsCount": 766
+        }
+      },
+      "query": "mutation recordBarSearchResultInfo($barSearchResultInfo: RetailBarSearchResultInfoProjectionInput) {\n  recordBarSearchResultInfo(barSearchResultInfo: $barSearchResultInfo)\n}"
+    }
+  },
+  {
+    "url": "https://ams.creativecdn.com/tags/v2?type=json",
+    "method": "POST",
+    "resource_type": "fetch",
+    "body": {
+      "v": "v0.2.1",
+      "sr": "",
+      "su": "https://www.autohero.com/de/search/?brand0=bmw",
+      "th": "11ABInXDmeTrvI62g12S",
+      "tags": [
+        {
+          "eventType": "listing",
+          "offerIds": [
+            "RK55339",
+            "YH89451"
+          ]
+        },
+        {
+          "eventType": "lid",
+          "id": "NaDGoATCfyERI2RsqhdZ",
+          "expiryDate": "2027-03-23T22:34:51.567Z"
+        }
+      ]
+    }
+  }
+]
