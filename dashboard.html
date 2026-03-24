@@ -93,6 +93,10 @@ const COLORS = {
   NL:"#ea580c",BE:"#0891b2",PL:"#ca8a04",AT:"#be185d"
 };
 
+function clean(val) {
+  return (val || "").replace(/^"|"$/g, '').trim();
+}
+
 async function fetchSheet(tabName) {
   const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(tabName)}`;
   const r = await fetch(url, { mode: 'cors', credentials: 'omit' });
@@ -128,32 +132,29 @@ const baseOpts = (yFmt) => ({
 let allSnapshots = [], allPrices = [], activeMarkets = new Set(MARKETS), activePriceMarket = "DE";
 
 function uniqueDates(data) {
-  return [...new Set(data.map(r => r[0]))].sort();
-}
-
-function getLatestByMarket(date) {
-  const latestByMarket = {};
-  allSnapshots.filter(r => r[0] === date).forEach(r => {
-    latestByMarket[r[1]] = r;
-  });
-  return Object.values(latestByMarket);
+  return [...new Set(data.map(r => clean(r[0])))].sort();
 }
 
 function buildOverview() {
   const dates = uniqueDates(allSnapshots);
   const latest = dates[dates.length - 1];
-  const latestRows = getLatestByMarket(latest);
 
-  const total = latestRows.reduce((s, r) => s + (parseInt(r[2]) || 0), 0);
+  const latestByMarket = {};
+  allSnapshots.filter(r => clean(r[0]) === latest).forEach(r => {
+    latestByMarket[clean(r[1])] = r;
+  });
+  const latestRows = Object.values(latestByMarket);
+
+  const total = latestRows.reduce((s, r) => s + (parseInt(clean(r[2])) || 0), 0);
   document.getElementById("m-total").textContent = total.toLocaleString();
 
-  const top = [...latestRows].sort((a, b) => (parseInt(b[2]) || 0) - (parseInt(a[2]) || 0))[0];
+  const top = [...latestRows].sort((a, b) => (parseInt(clean(b[2])) || 0) - (parseInt(clean(a[2])) || 0))[0];
   if (top) {
-    document.getElementById("m-top").textContent = top[1];
-    document.getElementById("m-top-sub").textContent = parseInt(top[2]).toLocaleString() + " listings";
+    document.getElementById("m-top").textContent = clean(top[1]);
+    document.getElementById("m-top-sub").textContent = parseInt(clean(top[2])).toLocaleString() + " listings";
   }
 
-  const totalRemoved = allSnapshots.reduce((s, r) => s + (parseInt(r[4]) || 0), 0);
+  const totalRemoved = allSnapshots.reduce((s, r) => s + (parseInt(clean(r[4])) || 0), 0);
   const dayCount = dates.length || 1;
   document.getElementById("m-removed").textContent = Math.round(totalRemoved / dayCount).toLocaleString();
   document.getElementById("last-updated").textContent = "Last updated: " + latest;
@@ -177,9 +178,9 @@ function buildOverview() {
   const datasets = MARKETS.filter(m => activeMarkets.has(m)).map(m => ({
     label: m,
     data: dates.map(d => {
-      const rows = allSnapshots.filter(x => x[0] === d && x[1] === m);
+      const rows = allSnapshots.filter(x => clean(x[0]) === d && clean(x[1]) === m);
       const row = rows[rows.length - 1];
-      return row ? parseInt(row[2]) || null : null;
+      return row ? parseInt(clean(row[2])) || null : null;
     }),
     borderColor: COLORS[m], backgroundColor: COLORS[m] + "15",
     tension: 0.3, pointRadius: 2, borderWidth: 2, fill: false
@@ -195,16 +196,14 @@ function buildOverview() {
 function buildVelocity() {
   const dates = uniqueDates(allSnapshots);
   const newData = dates.map(d => {
-    const rows = allSnapshots.filter(r => r[0] === d);
     const seen = {};
-    rows.forEach(r => { seen[r[1]] = r; });
-    return Object.values(seen).reduce((s, r) => s + (parseInt(r[3]) || 0), 0);
+    allSnapshots.filter(r => clean(r[0]) === d).forEach(r => { seen[clean(r[1])] = r; });
+    return Object.values(seen).reduce((s, r) => s + (parseInt(clean(r[3])) || 0), 0);
   });
   const removedData = dates.map(d => {
-    const rows = allSnapshots.filter(r => r[0] === d);
     const seen = {};
-    rows.forEach(r => { seen[r[1]] = r; });
-    return Object.values(seen).reduce((s, r) => s + (parseInt(r[4]) || 0), 0);
+    allSnapshots.filter(r => clean(r[0]) === d).forEach(r => { seen[clean(r[1])] = r; });
+    return Object.values(seen).reduce((s, r) => s + (parseInt(clean(r[4])) || 0), 0);
   });
   const netData = newData.map((v, i) => v - removedData[i]);
 
@@ -224,17 +223,17 @@ function buildPrices() {
     filters.appendChild(b);
   });
 
-  const dates = uniqueDates(allPrices.filter(r => r[1] === activePriceMarket));
+  const dates = uniqueDates(allPrices.filter(r => clean(r[1]) === activePriceMarket));
   const latest = dates[dates.length - 1];
-  const rows = allPrices.filter(r => r[0] === latest && r[1] === activePriceMarket);
-  rows.sort((a, b) => (parseFloat(b[3]) || 0) - (parseFloat(a[3]) || 0));
+  const rows = allPrices.filter(r => clean(r[0]) === latest && clean(r[1]) === activePriceMarket);
+  rows.sort((a, b) => (parseFloat(clean(b[3])) || 0) - (parseFloat(clean(a[3])) || 0));
   const top20 = rows.slice(0, 20);
 
   mkChart("chart-prices", {
     type: "bar",
     data: {
-      labels: top20.map(r => r[2]),
-      datasets: [{ data: top20.map(r => parseFloat(r[3]) || 0), backgroundColor: "#2563eb", borderRadius: 4, barThickness: 18 }]
+      labels: top20.map(r => clean(r[2])),
+      datasets: [{ data: top20.map(r => parseFloat(clean(r[3])) || 0), backgroundColor: "#2563eb", borderRadius: 4, barThickness: 18 }]
     },
     options: {
       ...baseOpts(v => "€" + Math.round(v / 1000) + "k"),
